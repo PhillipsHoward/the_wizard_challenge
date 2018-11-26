@@ -6,8 +6,19 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- We will define our beans here : -->
-    <bean id="myWizard" class="com.wildcodeschool.myLibrary.models.Gandalf">
+    <bean id="BlueOutfit" class="fr.wildcodeschool.thewizardproject.models.BlueOutfit">
+    </bean>
+    <bean id="WhiteOutfit" class="fr.wildcodeschool.thewizardproject.models.WhiteOutfit">
+    </bean>
+    
+    
+    
+    <bean id="Gandalf" class="fr.wildcodeschool.thewizardproject.models.Gandalf">
+    	<constructor-arg ref="WhiteOutfit"/>
+    </bean>
+    
+    <bean id="Dumbledore" class="fr.wildcodeschool.thewizardproject.models.Dumbledore">
+    	<constructor-arg ref="BlueOutfit"/>
     </bean>
 
 </beans>
